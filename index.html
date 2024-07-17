@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>CodePen - FilterProject</title>
+  <link rel="stylesheet" href="./style.css">
+
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<body>
+    <header class="header">
+        <div class="container">
+            <h1 class="header__title">Filter generation</h1>
+        </div>
+    </header>
+
+    <main class="main">
+        <div class="container">
+            <div class="main__inner">
+                <!-- Левая форма -->
+                <form class="firstForm">
+                    <!-- Blur -->
+                    <div class="form_group">
+                        <label for="blur">Blur</label>
+                        <input type="checkbox" id="blur_check" checked>
+                    </div> 
+                    <input type="range" id="blur" min="0" max="25" step="0.1" value="0">
+
+                    <!-- Brightness -->
+                    <div class="form_group">
+                        <label for="brightness">Brightness</label>
+                        <input type="checkbox" id="brightness_check" checked>
+                    </div>
+                    <input type="range" id="brightness" min="0" max="250" step="0.1" value="100">
+                    
+                    <!-- Contrast -->
+                    <div class="form_group">
+                        <label for="contrast">Contrast</label>
+                        <input type="checkbox" id="contrast_check" checked>
+                    </div>
+                    <input type="range" id="contrast" min="0" max="250" step="0.1" value="100">
+
+                    <!-- Drop-shadow -->
+                    <div class="form_group">
+                        <label for="drop_shadow">Drop-shadow:</label>
+                        <input type="checkbox" id="shadow_check" checked>
+                    </div>
+
+                    <!-- Отдельная форма для Drop-shadow -->
+                    <div class="form_shadow">
+                        <!-- OffsetX -->
+                        <div class="form_group">
+                            <label for="offsetX">OffsetX</label>
+                        </div>
+                        <input type="range" id="offsetX" min="-250" max="250" step="0.1" value="0" style="width: 280px;">
+
+                        <!-- OffsetY -->
+                        <div class="form_group">
+                            <label for="offsetY">OffsetY</label>
+                        </div>
+                        <input type="range" id="offsetY" min="-250" max="250" step="0.1" value="0" style="width: 280px;">
+
+                        <!-- Blur-radius -->
+                        <div class="form_group">
+                            <label for="blur_radius">Blur-radius</label>
+                            <input type="checkbox" id="blur_radius_check" checked>
+                        </div>
+                        <input type="range" id="blur_radius" min="0" max="50" step="0.1" value="0" style="width: 280px;"><br>
+
+                        <!-- Color -->
+                        <label for="color">Color</label>
+                        <input type="color" id="color" value="#000000" style="margin-left:10px;">
+                    </div>
+                </form>
+
+                <!-- Example Img -->
+                <img src="https://kartinkin.net/uploads/posts/2022-02/1645500476_1-kartinkin-net-p-kvadratnie-kartinki-1.jpg" alt="Example" class="exampleImg" width="250" height="250">
+                <!-- Правая форма -->
+                <form class="secondForm">
+                    <!-- Hue-rotate -->
+                    <div class="form_group">
+                        <label for="hue_rotate">Hue-rotate</label>
+                        <input type="checkbox" id="hue_rotate_check" checked>
+                    </div>
+                    <input type="range" id="hue_rotate" min="0" max="360" step="0.1" value="0" style="width: 330px;">
+
+                    <!-- Grayscale -->
+                    <div class="form_group">
+                        <label for="grayscale">Grayscale</label>
+                        <input type="checkbox" id="grayscale_check" checked>
+                    </div>
+                    <input type="range" id="grayscale" min="0" max="100" step="0.1" value="0" style="width: 330px;">
+
+                    <!-- Invert -->
+                    <div class="form_group">
+                        <label for="invert">Invert</label>
+                        <input type="checkbox" id="invert_check" checked>
+                    </div>
+                    <input type="range" id="invert" min="0" max="100" step="0.1" value="0" style="width: 330px;">
+
+                    <!-- Opacity -->
+                    <div class="form_group">
+                        <label for="opacity">Opacity</label>
+                        <input type="checkbox" id="opacity_check" checked>
+                    </div>
+                    <input type="range" id="opacity" min="0" max="100" step="0.1" value="100" style="width: 330px;">
+
+                    <!-- Saturate -->
+                    <div class="form_group">
+                        <label for="saturate">Saturate</label>
+                        <input type="checkbox" id="saturate_check" checked>
+                    </div>
+                    <input type="range" id="saturate" min="0" max="500" step="0.1" value="100" style="width: 330px;">
+
+                    <!-- Sepia -->
+                    <div class="form_group">
+                        <label for="sepia">Sepia</label>
+                        <input type="checkbox" id="sepia_check" checked>
+                    </div>
+                    <input type="range" id="sepia" min="0" max="100" step="0.1" value="0" style="width: 330px;">
+                </form>
+            </div>
+
+            <!-- Result -->
+            <div class="result">
+                <h2>Result</h2>
+                <textarea id="cssCode" readonly></textarea><br>
+                <!-- Button Clear All -->
+                <input type="submit" id="clear" value="Clear All">
+            </div>
+            
+        </div>
+    </main>
+
+    <footer class="footer">
+        <h3>made by Anastasia Konyukhova</h3>
+    </footer>
+<!-- partial -->
+  <script  src="./script.js"></script>
+
+</body>
+</html>
