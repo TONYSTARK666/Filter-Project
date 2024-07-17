@@ -6,4 +6,4 @@
 1. HTML - элементы формы
 2. JS - отслеживание событий
 
-> Просмотр: 
+> Просмотр: [FILTER] (https://tonystark666.github.io/Filter-Project/)
